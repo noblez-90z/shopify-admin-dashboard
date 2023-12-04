@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: #f1f1f1;
+
+}
+header{
+    display: flex;
+    background-color: #333;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    /* border: 2px solid red; */
+    width: 400px;
+}
+.desktop-logo{
+    display: block;
+    top: 0;
+    left: 0;
+}
+.mobile-logo{
+    width: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+/* .search_contianer{
+    border: 2px solid red;
+    display: flex;
+    width: 450px;
+    background-color: #616161;
+    border-radius: 8px;
+
+} */
+.search_contianer input{
+    width: 450px;
+    height: 32px;
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+    background-color: #616161;
+    border: 1px solid #e3e3e3;
+    color: #e3e3e3;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    
+    
+}
+.search-icon svg{
+    display: block;
+    position: relative;
+    /* left: 30px; */
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    z-index: 10;   
+    /* border: 1px solid red; */
+    margin: 5px;
+}
+.search_contianer input::placeholder{
+    padding-left: 20px;
+    color: #e3e3e3;
+}
+.notification-userside{
+    width: 350px;
+    height: 35px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+.bell{
+    border: none;
+    background-color: #616161;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    
+}
+
+.bell svg{
+    /* background-color: #fff; */
+    
+    margin: auto;
+}
+
+.username button{
+    padding: 5px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    background-color: #616161;
+    color: #e3e3e3;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.username button span{
+    border: none;
+    background-color: pink;
+    color: #e3e3e3;
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.mobile-shortname{
+    border: 1px solid red;
+    width: 32px;
+    height: 25px;
+    text-align: center;
+    color: #e3e3e3;
+    background-color: pink;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    display: none;
+}
+.notification{
+    position: relative;
+    border: 2px solid #e3e3e3;
+    border-radius: 8px;
+    width: 0px;
+    right: 220px;
+    top:  20px;
+    opacity: 0;
+    z-index: 10;
+    background-color: white;
+}
+.alerts{
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: white;
+}
+.alerts h3{
+    text-transform: capitalize;
+    margin: 3px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    
+    
+}
+.notification-msg{
+    border: none;
+    height: 40px;
+    margin: 8px;
+    padding: 3px;
+    background-color: whitesmoke;
+}
+.notification.active{
+    width: 350px;
+    opacity: 1;
+    z-index: 99;
+}
+.user-box{
+    border: 2px solid #dbdbdbdb;
+    border-radius: 10px;
+    height: 470px;
+    width: 350px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: 10;
+    background-color: white;
+    opacity: 0;
+}
+.user-box.active{
+    opacity: 1;
+    z-index: 60;
+}
+.name{
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+    background-color: #dbdbdbdb;
+}
+strong{
+    border: none;
+    padding: 8px;
+    color: #e3e3e3;
+    background-color: pink;
+    border-radius: 8px;
+}
+.store{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px;
+    padding: 8px;
+    font-weight:  500;
+    font-size: 1.5em;
+    border-bottom: 2px solid #dbdbdbdb;
+}
+.user-box li{
+    border: none;
+    width: 80%;
+    height: 30px;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: white;
+    list-style-type: none;
+}
+.user-box li a{
+    text-decoration: none;
+    color: #333;
+}
+.user-box li:nth-child(6){
+    border-top: 1px solid #dbdbdbdb;
+    width: 90%;
+    border-radius: 0;
+    height: 55px;
+    padding: 5px;
+    display: block;
+}
+.user-box li:hover{
+    border: 2px solid blue;
+    border-radius: 8px;
+}
+
+/* main body */
+
+/* .trials{
+    border: 2px solid red;
+    width: 650px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #333;
+    color: #e3e3e3;
+    padding: 8px;
+    margin: 10px auto;
+
+
+    
+}
+} */
+.hero{
+    height: 100px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.trial-tag{
+    /* border: 2px solid red; */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    /* margin-left: 300px;
+    margin-top: 300px; */
+    width: 650px;
+    height: 50px;
+    z-index: 50;
+    background-color: #333;
+    color: #e3e3e3
+}
+.side-trial button{
+    padding: 5px;
+    margin: 8px;
+    border-radius: 6px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.setup{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    
+}
+.setup-container{
+    background-color: white;
+    border-radius: 8px;
+    
+    width: 650px;
+    height: 80px;
+    z-index: 50;
+    
+}
+.setup-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+.setup-container.active{
+    height: fit-content;
+}
+.setup li{
+    list-style-type: none;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    height: 50px;
+    cursor: pointer;
+    
+}
+.list{
+    display: flex;
+    
+}
+
+.description{
+    margin-top: 8px;
+    margin-left: 5px;
+    /* margin-right: 10px; */
+    
+}
+.list-description{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    opacity: 0;
+}
+.list-description img{
+    width: 130px;
+    height: 80px;
+}
+.list-description button{
+    padding: 5px;
+    margin: 8px;
+    border-radius: 8px;
+    color: #f1f1f1;
+    background-color: #333;
+    inset: 10px black;
+    border: 1.5px solid black;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.list-description.active{
+    opacity: 1;
+    
+}
+.setup li.active{
+    height: 140px;
+    background-color: #f3f3f3;
+    
+}
+#listitem{
+    opacity: 0;
+}
+#listitem.active{
+    opacity: 1;
+}
+#first{
+    opacity: 0;
+}
+
+#first.active{
+    opacity: 1;
+}
+#second{
+    opacity: 0;
+}
+#second.active{
+    opacity: 1;
+}
+
+.icon-container{
+    position: relative;
+    /* border: 2px solid red; */
+    overflow: hidden;
+    width: 70px;
+    height: 40px;
+
+}
+
+.icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+
+
+}
+.icon.icon1{
+    opacity: 1;
+}
+.icon-container:hover .icon1 {
+    opacity: 0; /* Hide the first icon when hovering over the container */
+  }
+  
+  .icon-container:hover .icon2 {
+    opacity: 1; 
+  }
+.icon3.completed{
+    opacity: 1;
+}
+#subheading{
+    margin-left: 15px;
+}
+#subheading1{
+    margin-left: 15px;
+}
+
+
+
+
+
+@media screen and (max-width:375px) {
+    header{
+        width: 100%;
+        display: flex;
+    }
+    .desktop-logo{
+        display: none;
+        opacity: 0;
+    }
+    .mobile-logo{
+        display: block;
+        opacity: 1;
+        width: 50px;
+    }
+    .search_contianer input{
+        width: 200px;
+        /* margin-left: 5px; */
+    }
+    .notification-userside{
+        display: flex;
+    }
+    .bell{
+        position: absolute;
+        right: 50px;
+    }
+    .username button{
+        display: none;
+    }
+    .mobile-shortname{
+        display: block;
+        margin-top: 5px;
+    }
+    .trial-tag{
+        width: 100%;
+        display: flex;
+        margin: 5px;
+        
+    }
+    .trial-tag p{
+        width: 200px;
+    }
+    .setup-container{
+        width: 90%;
+        margin: 0 5px;
+    }
+    .icon-container{
+        width: 150px;
+    }
+    #iconContainer22{
+        width: 200px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .list-description{
+        padding: 0;
+        margin: 0;
+    }
+    .list-description button{
+        padding: 3px;
+        margin: 3px;
+    }
+    .setup li:nth-child(3).active{
+        margin-left: 0;
+        margin: 2px;
+        height: 178px;
+    }
+    .setup li:nth-child(5).active{
+        height: 200px;
+    }
+}
